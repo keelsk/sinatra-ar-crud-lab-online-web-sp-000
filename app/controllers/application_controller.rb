@@ -17,8 +17,13 @@ class ApplicationController < Sinatra::Base
   end 
   
   post '/articles' do 
+<<<<<<< HEAD
     @article = Article.create(title: params[:title], content: params[:content])
     redirect "articles/#{@article.id}"
+=======
+    Article.create(title: params[:title], content: params[:content])
+    erb :show
+>>>>>>> 7e369210950c43cf2a2dcff85f3888297c49ad7a
   end
   
   get '/articles' do 
@@ -32,6 +37,7 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/articles/:id/edit' do 
+<<<<<<< HEAD
     @article = Article.find(params[:id])
     erb :edit
   end
@@ -46,6 +52,16 @@ class ApplicationController < Sinatra::Base
     @article = Article.find(params[:id])
     @article.destroy
     redirect "/articles"
+=======
+    erb :edit
+  end
+  
+  delete '/articles/:id' do 
+    @article = Article.find(params[:id])
+    @article.destroy
+    
+    erb :index
+>>>>>>> 7e369210950c43cf2a2dcff85f3888297c49ad7a
   end
   
 end

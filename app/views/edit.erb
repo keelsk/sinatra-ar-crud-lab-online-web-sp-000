@@ -1,8 +1,13 @@
 <form method ="post" action ="/articles/<%=@article.id%>">
+<<<<<<< HEAD
   <input id ="hidden" type ="hidden" name="_method" value ="patch">
   Previous Title: <%=@article.title%>
   <p>Title: <input type = "text" name ="title"></p>
   Previous Content: <%=@article.content%>
+=======
+  <input type ="hidden" value ="hidden" name="_method" value ="PATCH">
+  <p>Title: <input type = "text" name ="title"></p>
+>>>>>>> 7e369210950c43cf2a2dcff85f3888297c49ad7a
   <p>Content: <textarea name ="content"></textarea></p>
   <br>
   <input type="submit" value="submit">
